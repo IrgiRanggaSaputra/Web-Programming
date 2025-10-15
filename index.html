@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Peminjaman Aset Kampus</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+      .hero {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+      }
+      .footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <img src="images/utb.png" alt="Logo Universitas Teknologi Bandung" style="height: 40px;">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="#daftar-aset">Daftar Aset</a></li>
+            <li class="nav-item"><a class="nav-link" href="#peminjaman">Form Peminjaman</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Sistem Peminjaman Aset Kampus</h1>
+        <p>Pinjam dan kelola aset kampus dengan mudah dan cepat.</p>
+        <a href="#peminjaman" class="btn btn-light btn-lg mt-3">Mulai Pinjam</a>
+      </div>
+    </section>
+
+    <!-- ===== DAFTAR ASET ===== -->
+    <section id="daftar-aset" class="container my-5">
+      <h2 class="text-center mb-4">Daftar Aset Tersedia</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/proyektor.png" class="card-img-top" alt="Proyektor" weight="400" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Proyektor Epson</h5>
+              <p class="card-text">Kondisi: Baik | Tersedia</p>
+              <a href="#peminjaman" class="btn btn-primary btn-sm">Pinjam Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/laptop.png" class="card-img-top" alt="Laptop" weight="400" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Laptop Lenovo</h5>
+              <p class="card-text">Kondisi: Baik | Tersedia</p>
+              <a href="#peminjaman" class="btn btn-primary btn-sm">Pinjam Sekarang</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <img src="images/konverter.png" class="card-img-top" alt="Konverter HDMI" weight="400" height="300">
+            <div class="card-body">
+              <h5 class="card-title">Konverter HDMI</h5>
+              <p class="card-text">Kondisi: Baik | Tersedia</p>
+              <a href="#peminjaman" class="btn btn-primary btn-sm">Pinjam Sekarang</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORM PEMINJAMAN ===== -->
+    <section id="peminjaman" class="container my-5">
+      <h2 class="text-center mb-4">Form Peminjaman</h2>
+      <form class="shadow p-4 rounded bg-light">
+        <div class="mb-3">
+          <label class="form-label">Nama Lengkap</label>
+          <input type="text" class="form-control" placeholder="Masukkan nama lengkap Anda">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">NIM</label>
+          <input type="text" class="form-control" placeholder="Masukkan NIM">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Aset yang Dipinjam</label>
+          <select class="form-select">
+            <option>Proyektor</option>
+            <option>Laptop</option>
+            <option>Ruangan Rapat</option>
+          </select>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Tanggal Pinjam</label>
+            <input type="date" class="form-control">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Tanggal Kembali</label>
+            <input type="date" class="form-control">
+          </div>
+        </div>
+        <button class="btn btn-success">Ajukan Peminjaman</button>
+      </form>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="kontak" class="footer">
+      <p>&copy;  2025 Sistem Peminjaman Aset Kampus - Universitas Teknologi Bandung</p>
+      <p>Irgi Rangga Saputra</p>
+    </footer>
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
