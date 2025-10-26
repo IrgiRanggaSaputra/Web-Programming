@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Irgi Rangga Saputra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header-with-logo">
+      <div class="header-text">
+        <h1>Sistem Peminjaman Aset Kampus</h1>
+        <div class="meta">
+          Mahasiswa: <strong>Irgi Rangga Saputra</strong> · <br>Program Studi: <strong>Teknik Informatika</strong>
+        </div>
+      </div>
+      
+
+      <img src="images/utb.png" alt="Logo Kampus" class="logo" >
+    </header>
+
+    <section>
+      <p>
+        Sistem ini membantu mahasiswa dan staf kampus melakukan peminjaman aset seperti laptop, proyektor, kamera,
+        dan peralatan laboratorium. Proses peminjaman terpusat sehingga pelacakan aset jadi lebih mudah.
+      </p>
+
+      <p>
+        Cara penggunaan singkat: pilih aset yang tersedia, isi formulir peminjaman singkat, lalu tunggu konfirmasi.
+        Petugas aset akan menyiapkan barang dan memberi tahu kapan bisa diambil.
+      </p>
+
+      <p id="status-paragraph">
+        Status saat ini: <span class="status" id="asset-status">Tidak ada aksi</span>
+      </p>
+    </section>
+
+    <div class="controls">
+      <button id="showTimeBtn" type="button">Tampilkan Tanggal & Jam</button>
+      <div class="info-box" id="time-output">
+        Klik tombol untuk melihat tanggal dan jam aksi terakhir.
+      </div>
+    </div>
+
+    <!-- Form Peminjaman Aset -->
+    <section class="form-section">
+      <h2>Formulir Peminjaman Aset</h2>
+      <form id="form-peminjaman">
+        <label for="nama">Nama Peminjam:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+
+        <label for="aset">Jenis Aset:</label>
+        <select id="aset" name="aset" required>
+          <option value="">-- Pilih Aset --</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Proyektor">Proyektor</option>
+          <option value="Kamera">Kamera</option>
+          <option value="Alat Laboratorium">Konverter</option>
+          <option value="Alat Laboratorium">Spidol</option>
+        </select>
+
+        <label for="tanggal">Tanggal Peminjaman:</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+
+        <button type="submit">Kirim Permintaan</button>
+      </form>
+
+      <div class="info-box" id="hasil-peminjaman"></div>
+    </section>
+
+    <footer>
+      <p>By Irgi Rangga Saputra</p>
+    </footer>
+  </main>
+
+  <script>
+    // Tombol tampilkan waktu
+    document.getElementById('showTimeBtn').addEventListener('click', () => {
+      const now = new Date();
+      const pad = n => String(n).padStart(2, '0');
+      const formatted = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+      document.getElementById('time-output').textContent = 'Aksi terakhir: ' + formatted;
+      document.getElementById('asset-status').textContent = 'Status saat ini: Tombol telah diklik.';
+      alert('Waktu aksi: ' + formatted);
+    });
+
+    // Form peminjaman aset
+    document.getElementById('form-peminjaman').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value;
+      const aset = document.getElementById('aset').value;
+      const tanggal = document.getElementById('tanggal').value;
+
+      const hasil = `
+        <strong>Data Peminjaman:</strong><br>
+        Nama: ${nama}<br>
+        Aset: ${aset}<br>
+        Tanggal Peminjaman: ${tanggal}
+      `;
+      document.getElementById('hasil-peminjaman').innerHTML = hasil;
+    });
+  </script>
+</body>
+</html>

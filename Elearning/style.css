@@ -1,0 +1,130 @@
+:root {
+  --accent: #0b74de;
+  --card-bg: rgba(255,255,255,0.9);
+  --text: #0b2338;
+}
+
+/* Background gradient */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #e6f0ff 0%, #f7fbff 40%, #e8fff2 100%);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(11,34,56,0.12);
+  padding: 28px;
+  line-height: 1.6;
+}
+
+/* Header dengan logo */
+.header-with-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-text h1 {
+  margin: 0 0 10px 0;
+  font-size: 1.6rem;
+  color: var(--accent);
+}
+.meta {
+  font-size: 0.95rem;
+  color: #234;
+  opacity: 0.9;
+}
+.logo {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+p { margin: 12px 0; }
+
+.status {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(11,116,222,0.06), rgba(11,116,222,0.03));
+  border: 1px solid rgba(11,116,222,0.08);
+  display: inline-block;
+}
+
+.controls {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(11,116,222,0.18);
+}
+button:active { transform: translateY(1px); }
+
+.info-box {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Formulir */
+.form-section {
+  margin-top: 30px;
+}
+.form-section h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+label {
+  font-weight: 600;
+}
+input, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+form button {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #2b3b4a;
+  opacity: 0.8;
+}
+
+@media (max-width: 560px) {
+  .container { padding: 18px; }
+  .header-with-logo { flex-direction: column; align-items: flex-start; }
+  .logo { margin-top: 10px; width: 70px; }
+  .header-text h1 { font-size: 1.35rem; }
+}
