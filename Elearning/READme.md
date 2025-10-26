@@ -56,6 +56,10 @@ Saat tombol **“Kirim Permintaan”** diklik, data hasil pengisian akan ditampi
 
 ---
 
+## Tampilan
+![Tampilan_Awal](images/1.png)
+
+![Tampilan_Awal](images/2.png)
 
 ##  Kontributor
 
